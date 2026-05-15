@@ -5,6 +5,8 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor3) var(--cor1);
 }
 
 :root {
@@ -13,8 +15,13 @@
     --cor3: #e45a71;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor1);
+    overflow-x: hidden;
 }
 
 header {
@@ -43,7 +50,7 @@ div#letreiro > img {
     height: 14px;
 }
 
-div#botoes > a  {
+div#botoes > a, div#voltar > a  {
     text-decoration: none;
     color: white;
     padding: 10px;
@@ -53,7 +60,7 @@ div#botoes > a  {
     transition: 0.3s;
 }
 
-div#botoes > a:hover {
+div#botoes > a:hover, div#voltar > a:hover {
     transform: scale(1.03);
     background-color: var(--cor1);
 }
